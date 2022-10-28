@@ -4,6 +4,7 @@ const envHelper = require('./helpers/environmentVariablesHelper.js');
 const path = require('path');
 const fs = require('fs');
 const packageObj = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 enableLogger({
   logBasePath: path.join(__dirname, 'logs'),
