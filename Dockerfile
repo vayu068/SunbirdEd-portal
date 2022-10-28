@@ -6,4 +6,4 @@ COPY --chown=sunbird . /home/sunbird/app_dist/
 USER sunbird
 WORKDIR /home/sunbird/app_dist
 EXPOSE 3000
-CMD ["NODE_TLS_REJECT_UNAUTHORIZED='0'","node", "server.js", "&"]
+CMD ["node", "server.js", "&"]
